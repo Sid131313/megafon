@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
@@ -10,7 +10,7 @@
   <meta property="og:description" content="Быстрый безлимитный интернет. Бесплатное подключение. Выезд мастера в день заявки.">
   <meta property="og:type" content="website">
   <title>МегаСеть — Интернет в частный дом от 490 руб/мес | Бесплатное подключение</title>
-  <link rel="icon" type="image/png" href="@megafon/ui-icons/service-logos-24-megafon_lk.svg">
+  <link rel="icon" type="image/png" href="img/favicon.png">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -20,18 +20,42 @@
 <!-- ===== HEADER ===== -->
 <header class="header" id="header">
   <div class="container header__inner">
-    <a href="/" class="logo">
-      <img src="/img/logo-new.svg" alt="">
+    <a href="index.html" class="logo">
+      <img src="img/logo-new.svg" alt="">
     </a>
     <nav class="nav" id="nav">
       <a href="#tariffs" class="nav__link">Тарифы</a>
-      <a href="#coverage" class="nav__link">Проверить адрес</a>
-      <a href="#advantages" class="nav__link">Преимущества</a>
-      <a href="#faq" class="nav__link">FAQ</a>
+      <details class="city-menu">
+        <summary class="city-menu__summary">
+          <span class="city-menu__label">
+            <img src="img/geolocation_megafon_style.svg" alt="" class="city-menu__icon">
+            Уфа
+          </span>
+          <span class="city-menu__chevron" aria-hidden="true"></span>
+        </summary>
+        <div class="city-menu__dropdown">
+          <button type="button" class="city-menu__item">Москва</button>
+          <button type="button" class="city-menu__item">Санкт-Петербург</button>
+          <button type="button" class="city-menu__item">Новосибирск</button>
+          <button type="button" class="city-menu__item">Екатеринбург</button>
+          <button type="button" class="city-menu__item">Казань</button>
+          <button type="button" class="city-menu__item">Нижний Новгород</button>
+          <button type="button" class="city-menu__item">Челябинск</button>
+          <button type="button" class="city-menu__item">Красноярск</button>
+          <button type="button" class="city-menu__item">Самара</button>
+          <button type="button" class="city-menu__item">Уфа</button>
+          <button type="button" class="city-menu__item">Ростов-На-Дону</button>
+          <button type="button" class="city-menu__item">Омск</button>
+          <button type="button" class="city-menu__item">Краснодар</button>
+          <button type="button" class="city-menu__item">Воронеж</button>
+          <button type="button" class="city-menu__item">Пермь</button>
+          <button type="button" class="city-menu__item">Волгоград</button>
+        </div>
+      </details>
     </nav>
     <div class="header__contacts">
       <a href="tel:+78001234567" class="btn btn--phone">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        <img src="img/phone.png" alt="" class="phone-icon">
         8 800 123-45-67
       </a>
     </div>
@@ -44,106 +68,38 @@
 <!-- ===== HERO ===== -->
 <section class="hero" id="home">
   <div class="container hero__inner">
-    <div class="hero__content">
-      <div class="hero__badge">🔥 Акция: бесплатное подключение до конца месяца</div>
-      <h1 class="hero__title">Быстрый интернет<br>в частный дом<br><span class="highlight">от 490 ₽/мес</span></h1>
-      <p class="hero__subtitle">Безлимитный интернет до 1 Гбит/с. Без обрывов, без ограничений. Выезд мастера в день заявки — бесплатно.</p>
-      <ul class="hero__features">
-        <li><svg class="check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Бесплатное подключение и настройка</li>
-        <li><svg class="check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Работаем в частном секторе и на дачах</li>
-        <li><svg class="check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Гарантия стабильности 99,9%</li>
-        <li><svg class="check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Техподдержка 24/7 — бесплатно</li>
-      </ul>
-      <form class="hero__form" id="hero-form" action="#" method="post">
-        <div class="form__group">
-          <input type="text" name="address" class="form__input" placeholder="Ваш адрес (улица, дом)" required autocomplete="street-address">
-        </div>
-        <div class="form__group">
-          <input type="tel" name="phone" class="form__input" placeholder="Ваш телефон" required autocomplete="tel">
-        </div>
-        <button type="submit" class="btn btn--primary btn--large btn--full">
-          Проверить подключение — бесплатно
-        </button>
-        <p class="form__agree">Нажимая кнопку, вы соглашаетесь с <a href="/privacy">политикой конфиденциальности</a></p>
-      </form>
-    </div>
-    <div class="hero__image">
-      <!-- Место для главного изображения -->
-      <div class="img-placeholder img-placeholder--hero">
-        <span>Изображение: счастливая семья дома с интернетом<br>Рекомендуемый размер: 600×500px</span>
-      </div>
-      <div class="hero__stats">
-        <div class="stat">
-          <strong>12 000+</strong>
-          <span>довольных клиентов</span>
-        </div>
-        <div class="stat">
-          <strong>5 лет</strong>
-          <span>на рынке</span>
-        </div>
-        <div class="stat">
-          <strong>99,9%</strong>
-          <span>uptime сети</span>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="hero__scroll">
-    <div class="scroll-indicator">
-      <span>Узнать больше</span>
-      <div class="scroll-arrow"></div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== TICKER (бегущая строка) ===== -->
-<div class="ticker">
-  <div class="ticker__inner">
-    <span>⚡ Скорость до 1 Гбит/с</span>
-    <span>🏠 Частный сектор</span>
-    <span>✅ Бесплатное подключение</span>
-    <span>📞 Поддержка 24/7</span>
-    <span>💳 Без абонентской платы за первый месяц</span>
-    <span>🔒 Гарантия качества</span>
-    <span>⚡ Скорость до 1 Гбит/с</span>
-    <span>🏠 Частный сектор</span>
-    <span>✅ Бесплатное подключение</span>
-    <span>📞 Поддержка 24/7</span>
-    <span>💳 Без абонентской платы за первый месяц</span>
-    <span>🔒 Гарантия качества</span>
-  </div>
-</div>
-
-<!-- ===== COVERAGE CHECK ===== -->
-<section class="coverage" id="coverage">
-  <div class="container">
-    <div class="coverage__inner">
-      <div class="coverage__text">
-        <h2 class="section__title">Проверьте подключение<br>по вашему адресу</h2>
-        <p class="section__desc">Введите адрес — мгновенно покажем доступные тарифы и сроки подключения. Уже подключили более 200 улиц в вашем районе.</p>
-        <ul class="coverage__list">
-          <li><svg class="check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Результат — мгновенно</li>
-          <li><svg class="check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Без обязательств</li>
-          <li><svg class="check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Подберём лучший тариф</li>
+    <h1 class="hero__title">МегаФон — домашний интернет и ТВ с подключением по адресу</h1>
+    <div class="hero__panel">
+      <div class="hero__content">
+        <p class="hero__subtitle">Проверим возможность подключения по адресу</p>
+        <ul class="hero__features">
+          <li>Введите улицу и номер дома - проверим техническую возможность подключения домашнего интернета</li>
         </ul>
+        <form class="hero__form" id="hero-form" action="#" method="post">
+          <div class="form__group">
+            <input type="text" name="address" class="form__input hero__input" placeholder="Улица и номер дома" required autocomplete="street-address">
+          </div>
+          <div class="form__group">
+            <input type="tel" name="phone" class="form__input hero__input" placeholder="Ваш телефон" required autocomplete="tel">
+          </div>
+          <div class="form__consents form__consents--hero">
+            <label class="form-consent">
+              <input type="checkbox" name="privacy_policy" class="form-consent__input" required checked>
+              <span class="form-consent__text">Я принимаю <a href="privacy.html#privacy-policy" target="_blank" rel="noopener">политику конфиденциальности</a></span>
+            </label>
+            <label class="form-consent">
+              <input type="checkbox" name="personal_data_processing" class="form-consent__input" required checked>
+              <span class="form-consent__text">Я даю <a href="privacy.html#personal-data-consent" target="_blank" rel="noopener">согласие на обработку персональных данных</a></span>
+            </label>
+          </div>
+          <button type="submit" class="btn btn--primary btn--large hero__cta">
+            Проверить
+          </button>
+        </form>
       </div>
-      <form class="coverage__form" id="coverage-form" action="#" method="post">
-        <div class="form__group">
-          <label class="form__label">Ваш адрес</label>
-          <input type="text" name="address" class="form__input form__input--large" placeholder="Например: ул. Садовая, 15" required>
-        </div>
-        <div class="form__group">
-          <label class="form__label">Телефон для связи</label>
-          <input type="tel" name="phone" class="form__input form__input--large" placeholder="+7 (___) ___-__-__" required>
-        </div>
-        <button type="submit" class="btn btn--primary btn--large btn--full">
-          Проверить подключение
-        </button>
-        <div class="coverage__guarantee">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          <span>Без спама. Ваши данные под защитой.</span>
-        </div>
-      </form>
+      <div class="hero__image">
+        <img src="img/hero.png" alt="Домашний интернет и ТВ МегаФон" class="hero__illustration">
+      </div>
     </div>
   </div>
 </section>
@@ -151,118 +107,386 @@
 <!-- ===== TARIFFS ===== -->
 <section class="tariffs" id="tariffs">
   <div class="container">
-    <div class="section__header">
-      <span class="section__label">Тарифные планы</span>
-      <h2 class="section__title">Выберите подходящий тариф</h2>
-      <p class="section__desc">Все тарифы — безлимитный интернет без ограничений скорости и объёма трафика</p>
+    <div class="section__header tariffs__intro">
+      <h2 class="section__title">Тарифы МегаФон для дома</h2>
     </div>
-    <div class="tariffs__grid">
 
-      <!-- Тариф 1 -->
-      <div class="tariff-card">
-        <div class="tariff-card__header">
-          <div class="tariff-card__name">Базовый</div>
-          <div class="tariff-card__speed">100 Мбит/с</div>
-          <div class="tariff-card__price">
-            <span class="price__amount">490</span>
-            <span class="price__currency">₽/мес</span>
-          </div>
-          <div class="tariff-card__old-price">Подключение — <s>2500 ₽</s> <strong>бесплатно</strong></div>
-        </div>
-        <ul class="tariff-card__features">
-          <li><svg class="check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Скорость до 100 Мбит/с</li>
-          <li><svg class="check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Безлимитный трафик</li>
-          <li><svg class="check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Wi-Fi роутер в аренду</li>
-          <li><svg class="check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Техподдержка 24/7</li>
-          <li class="disabled"><svg viewBox="0 0 24 24" width="16" height="16" stroke="#ccc" fill="none" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> Статический IP</li>
-          <li class="disabled"><svg viewBox="0 0 24 24" width="16" height="16" stroke="#ccc" fill="none" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> Антивирус в подарок</li>
-        </ul>
-        <a href="#hero-form" class="btn btn--outline btn--full tariff-cta">Подключить</a>
-      </div>
-
-      <!-- Тариф 2 (ПОПУЛЯРНЫЙ) -->
-      <div class="tariff-card tariff-card--popular">
-        <div class="tariff-card__badge">Выбор клиентов</div>
-        <div class="tariff-card__header">
-          <div class="tariff-card__name">Оптимальный</div>
-          <div class="tariff-card__speed">300 Мбит/с</div>
-          <div class="tariff-card__price">
-            <span class="price__amount">690</span>
-            <span class="price__currency">₽/мес</span>
-          </div>
-          <div class="tariff-card__old-price">Подключение — <s>2500 ₽</s> <strong>бесплатно</strong></div>
-        </div>
-        <ul class="tariff-card__features">
-          <li><svg class="check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Скорость до 300 Мбит/с</li>
-          <li><svg class="check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Безлимитный трафик</li>
-          <li><svg class="check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Wi-Fi роутер в аренду</li>
-          <li><svg class="check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Техподдержка 24/7</li>
-          <li><svg class="check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Статический IP</li>
-          <li><svg class="check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Антивирус в подарок</li>
-        </ul>
-        <a href="#hero-form" class="btn btn--primary btn--full tariff-cta">Подключить</a>
-      </div>
-
-      <!-- Тариф 3 -->
-      <div class="tariff-card">
-        <div class="tariff-card__header">
-          <div class="tariff-card__name">Максимальный</div>
-          <div class="tariff-card__speed">1 Гбит/с</div>
-          <div class="tariff-card__price">
-            <span class="price__amount">990</span>
-            <span class="price__currency">₽/мес</span>
-          </div>
-          <div class="tariff-card__old-price">Подключение — <s>2500 ₽</s> <strong>бесплатно</strong></div>
-        </div>
-        <ul class="tariff-card__features">
-          <li><svg class="check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Скорость до 1 Гбит/с</li>
-          <li><svg class="check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Безлимитный трафик</li>
-          <li><svg class="check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Wi-Fi роутер в аренду</li>
-          <li><svg class="check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Техподдержка 24/7</li>
-          <li><svg class="check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Статический IP</li>
-          <li><svg class="check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Антивирус + ТВ в подарок</li>
-        </ul>
-        <a href="#hero-form" class="btn btn--outline btn--full tariff-cta">Подключить</a>
-      </div>
-
-      <!-- Тариф 4 Бизнес -->
-      <div class="tariff-card tariff-card--business">
-        <div class="tariff-card__header">
-          <div class="tariff-card__name">Бизнес</div>
-          <div class="tariff-card__speed">До 1 Гбит/с</div>
-          <div class="tariff-card__price">
-            <span class="price__amount">от 1490</span>
-            <span class="price__currency">₽/мес</span>
-          </div>
-          <div class="tariff-card__old-price">Индивидуальный расчёт</div>
-        </div>
-        <ul class="tariff-card__features">
-          <li><svg class="check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Выделенный канал</li>
-          <li><svg class="check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> SLA 99,9%</li>
-          <li><svg class="check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Персональный менеджер</li>
-          <li><svg class="check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Приоритетная поддержка</li>
-          <li><svg class="check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Статические IP-адреса</li>
-          <li><svg class="check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Видеонаблюдение, АТС</li>
-        </ul>
-        <a href="#hero-form" class="btn btn--green btn--full tariff-cta">Получить расчёт</a>
-      </div>
-
+    <div class="tariffs__filters" aria-label="Категории тарифов">
+      <button type="button" class="tariffs__filter tariffs__filter--active" data-tariff-panel="tariffs-tv-mobile" aria-pressed="true" aria-controls="tariffs-tv-mobile">
+        <span>Интернет + ТВ + Мобильная связь</span>
+      </button>
+      <button type="button" class="tariffs__filter" data-tariff-panel="tariffs-mobile" aria-pressed="false" aria-controls="tariffs-mobile">
+        <span>Интернет + Мобильная связь</span>
+      </button>
     </div>
-    <p class="tariffs__note">* Все цены указаны с НДС. Бесплатное подключение действует при заключении договора на 6 месяцев.</p>
+
+    <div class="tariffs__panel" id="tariffs-mobile" hidden>
+      <div class="tariffs__grid">
+        <article class="tariff-card">
+          <div class="tariff-card__content">
+            <div class="tariff-card__header">
+              <h3 class="tariff-card__title">Минимум</h3>
+              <div class="tariff-card__promos">
+                <span class="tariff-card__promo">Акция</span>
+              </div>
+            </div>
+
+            <div class="tariff-card__specs">
+              <div class="tariff-spec">
+                <span class="tariff-spec__label">
+                  <img src="@megafon/ui-icons/basic-16-net_16.svg" alt="">
+                  <span>Интернет</span>
+                </span>
+                <strong class="tariff-spec__value">100 Мбит/с</strong>
+              </div>
+              <div class="tariff-spec">
+                <span class="tariff-spec__label">
+                  <img src="@megafon/ui-icons/basic-16-phone_16.svg" alt="">
+                  <span>Мобильная связь</span>
+                </span>
+                <strong class="tariff-spec__value">200 минут</strong>
+              </div>
+              <div class="tariff-spec">
+                <span class="tariff-spec__label">
+                  <img src="@megafon/ui-icons/basic-16-sim-card_16.svg" alt="">
+                  <span>Мобильный интернет</span>
+                </span>
+                <strong class="tariff-spec__value">10 ГБ</strong>
+              </div>
+            </div>
+
+            <div class="tariff-card__addons">
+              <div class="tariff-card__addons-title">Можно добавить в тариф</div>
+              <div class="tariff-card__addon-badge" aria-hidden="true">+</div>
+            </div>
+          </div>
+
+          <div class="tariff-card__footer">
+            <div class="tariff-card__price-row">
+              <div class="tariff-card__price">0 ₽/мес</div>
+              <div class="tariff-card__price-meta">
+                <span class="tariff-card__old-price">800 ₽/мес</span>
+                <span class="tariff-card__discount">-100%</span>
+              </div>
+            </div>
+            <p class="tariff-card__caption">Скидка первый месяц</p>
+            <p class="tariff-card__caption">Подключение бесплатно</p>
+            <button type="button" class="btn btn--green btn--full tariff-card__button" data-open-modal="modal-application" data-request-topic="Тариф Минимум" data-modal-title="Подключение тарифа «Минимум»">Подключить</button>
+          </div>
+        </article>
+
+        <article class="tariff-card">
+          <div class="tariff-card__content">
+            <div class="tariff-card__header">
+              <h3 class="tariff-card__title">Безлимит +</h3>
+              <div class="tariff-card__promos">
+                <span class="tariff-card__promo">Акция</span>
+              </div>
+            </div>
+
+            <div class="tariff-card__specs">
+              <div class="tariff-spec">
+                <span class="tariff-spec__label">
+                  <img src="@megafon/ui-icons/basic-16-net_16.svg" alt="">
+                  <span>Интернет</span>
+                </span>
+                <strong class="tariff-spec__value">100 Мбит/с</strong>
+              </div>
+              <div class="tariff-spec">
+                <span class="tariff-spec__label">
+                  <img src="@megafon/ui-icons/basic-16-phone_16.svg" alt="">
+                  <span>Мобильная связь</span>
+                </span>
+                <strong class="tariff-spec__value">150 минут</strong>
+              </div>
+              <div class="tariff-spec">
+                <span class="tariff-spec__label">
+                  <img src="@megafon/ui-icons/basic-16-sim-card_16.svg" alt="">
+                  <span>Мобильный интернет</span>
+                </span>
+                <strong class="tariff-spec__value">∞ ГБ</strong>
+              </div>
+            </div>
+
+            <div class="tariff-card__addons">
+              <div class="tariff-card__addons-title">Можно добавить в тариф</div>
+              <div class="tariff-card__addon-badge" aria-hidden="true">+</div>
+            </div>
+          </div>
+
+          <div class="tariff-card__footer">
+            <div class="tariff-card__price-row">
+              <div class="tariff-card__price">0 ₽/мес</div>
+              <div class="tariff-card__price-meta">
+                <span class="tariff-card__old-price">800 ₽/мес</span>
+                <span class="tariff-card__discount">-100%</span>
+              </div>
+            </div>
+            <p class="tariff-card__caption">Скидка первый месяц</p>
+            <p class="tariff-card__caption">Подключение бесплатно</p>
+            <button type="button" class="btn btn--green btn--full tariff-card__button" data-open-modal="modal-application" data-request-topic="Тариф Безлимит +" data-modal-title="Подключение тарифа «Безлимит +»">Подключить</button>
+          </div>
+        </article>
+
+        <article class="tariff-card">
+          <div class="tariff-card__content">
+            <div class="tariff-card__header">
+              <h3 class="tariff-card__title">Минимум 400</h3>
+              <div class="tariff-card__promos">
+                <span class="tariff-card__promo">Акция</span>
+              </div>
+            </div>
+
+            <div class="tariff-card__specs">
+              <div class="tariff-spec">
+                <span class="tariff-spec__label">
+                  <img src="@megafon/ui-icons/basic-16-net_16.svg" alt="">
+                  <span>Интернет</span>
+                </span>
+                <strong class="tariff-spec__value">400 Мбит/с</strong>
+              </div>
+              <div class="tariff-spec">
+                <span class="tariff-spec__label">
+                  <img src="@megafon/ui-icons/basic-16-phone_16.svg" alt="">
+                  <span>Мобильная связь</span>
+                </span>
+                <strong class="tariff-spec__value">200 минут</strong>
+              </div>
+              <div class="tariff-spec">
+                <span class="tariff-spec__label">
+                  <img src="@megafon/ui-icons/basic-16-sim-card_16.svg" alt="">
+                  <span>Мобильный интернет</span>
+                </span>
+                <strong class="tariff-spec__value">10 ГБ</strong>
+              </div>
+            </div>
+
+            <div class="tariff-card__addons">
+              <div class="tariff-card__addons-title">Можно добавить в тариф</div>
+              <div class="tariff-card__addon-badge" aria-hidden="true">+</div>
+            </div>
+          </div>
+
+          <div class="tariff-card__footer">
+            <div class="tariff-card__price-row">
+              <div class="tariff-card__price">0 ₽/мес</div>
+              <div class="tariff-card__price-meta">
+                <span class="tariff-card__old-price">900 ₽/мес</span>
+                <span class="tariff-card__discount">-100%</span>
+              </div>
+            </div>
+            <p class="tariff-card__caption">Скидка первый месяц</p>
+            <p class="tariff-card__caption">Подключение бесплатно</p>
+            <button type="button" class="btn btn--green btn--full tariff-card__button" data-open-modal="modal-application" data-request-topic="Тариф Минимум 400" data-modal-title="Подключение тарифа «Минимум 400»">Подключить</button>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="tariffs__panel tariffs__panel--active" id="tariffs-tv-mobile">
+      <div class="tariffs__grid">
+        <article class="tariff-card">
+          <div class="tariff-card__content">
+            <div class="tariff-card__header">
+              <h3 class="tariff-card__title">Максимум</h3>
+              <div class="tariff-card__promos">
+                <span class="tariff-card__promo tariff-card__promo--hit">Хит продаж</span>
+                <span class="tariff-card__promo">Акция</span>
+              </div>
+            </div>
+
+            <div class="tariff-card__specs">
+              <div class="tariff-spec">
+                <span class="tariff-spec__label">
+                  <img src="@megafon/ui-icons/basic-16-net_16.svg" alt="">
+                  <span>Интернет</span>
+                </span>
+                <strong class="tariff-spec__value">100 Мбит/с</strong>
+              </div>
+              <div class="tariff-spec">
+                <span class="tariff-spec__label">
+                  <img src="@megafon/ui-icons/basic-16-tv_16.svg" alt="">
+                  <span>Телевидение</span>
+                </span>
+                <strong class="tariff-spec__value">250 ТВ 85 HD</strong>
+              </div>
+              <div class="tariff-spec">
+                <span class="tariff-spec__label">
+                  <img src="@megafon/ui-icons/basic-16-phone_16.svg" alt="">
+                  <span>Мобильная связь</span>
+                </span>
+                <strong class="tariff-spec__value">800 минут</strong>
+              </div>
+              <div class="tariff-spec">
+                <span class="tariff-spec__label">
+                  <img src="@megafon/ui-icons/basic-16-sim-card_16.svg" alt="">
+                  <span>Мобильный интернет</span>
+                </span>
+                <strong class="tariff-spec__value">∞ ГБ</strong>
+              </div>
+            </div>
+
+            <div class="tariff-card__addons">
+              <div class="tariff-card__addons-title">Можно добавить в тариф</div>
+              <div class="tariff-card__addon-badge" aria-hidden="true">+</div>
+            </div>
+          </div>
+
+          <div class="tariff-card__footer">
+            <div class="tariff-card__price-row">
+              <div class="tariff-card__price">99 ₽/мес</div>
+              <div class="tariff-card__price-meta">
+                <span class="tariff-card__old-price">899 ₽/мес</span>
+                <span class="tariff-card__discount">-89%</span>
+              </div>
+            </div>
+            <p class="tariff-card__caption">Скидка первый месяц</p>
+            <p class="tariff-card__caption">Подключение бесплатно</p>
+            <button type="button" class="btn btn--green btn--full tariff-card__button" data-open-modal="modal-application" data-request-topic="Тариф Максимум" data-modal-title="Подключение тарифа «Максимум»">Подключить</button>
+          </div>
+        </article>
+
+        <article class="tariff-card">
+          <div class="tariff-card__content">
+            <div class="tariff-card__header">
+              <h3 class="tariff-card__title">Семейный +</h3>
+              <div class="tariff-card__promos">
+                <span class="tariff-card__promo tariff-card__promo--hit">Хит продаж</span>
+                <span class="tariff-card__promo">Акция</span>
+              </div>
+            </div>
+
+            <div class="tariff-card__specs">
+              <div class="tariff-spec">
+                <span class="tariff-spec__label">
+                  <img src="@megafon/ui-icons/basic-16-net_16.svg" alt="">
+                  <span>Интернет</span>
+                </span>
+                <strong class="tariff-spec__value">100 Мбит/с</strong>
+              </div>
+              <div class="tariff-spec">
+                <span class="tariff-spec__label">
+                  <img src="@megafon/ui-icons/basic-16-tv_16.svg" alt="">
+                  <span>Телевидение</span>
+                </span>
+                <strong class="tariff-spec__value">250 ТВ 85 HD</strong>
+              </div>
+              <div class="tariff-spec">
+                <span class="tariff-spec__label">
+                  <img src="@megafon/ui-icons/basic-16-phone_16.svg" alt="">
+                  <span>Мобильная связь</span>
+                </span>
+                <strong class="tariff-spec__value">1500 минут</strong>
+              </div>
+              <div class="tariff-spec">
+                <span class="tariff-spec__label">
+                  <img src="@megafon/ui-icons/basic-16-sim-card_16.svg" alt="">
+                  <span>Мобильный интернет</span>
+                </span>
+                <strong class="tariff-spec__value">∞ ГБ</strong>
+              </div>
+            </div>
+
+            <div class="tariff-card__addons">
+              <div class="tariff-card__addons-title">Можно добавить в тариф</div>
+              <div class="tariff-card__addon-badge" aria-hidden="true">+</div>
+            </div>
+          </div>
+
+          <div class="tariff-card__footer">
+            <div class="tariff-card__price-row">
+              <div class="tariff-card__price">99 ₽/мес</div>
+              <div class="tariff-card__price-meta">
+                <span class="tariff-card__old-price">1049 ₽/мес</span>
+                <span class="tariff-card__discount">-91%</span>
+              </div>
+            </div>
+            <p class="tariff-card__caption">Скидка первый месяц</p>
+            <p class="tariff-card__caption">Подключение бесплатно</p>
+            <button type="button" class="btn btn--green btn--full tariff-card__button" data-open-modal="modal-application" data-request-topic="Тариф Семейный +" data-modal-title="Подключение тарифа «Семейный +»">Подключить</button>
+          </div>
+        </article>
+
+        <article class="tariff-card">
+          <div class="tariff-card__content">
+            <div class="tariff-card__header">
+              <h3 class="tariff-card__title">VIP</h3>
+              <div class="tariff-card__promos">
+                <span class="tariff-card__promo">Акция</span>
+              </div>
+            </div>
+
+            <div class="tariff-card__specs">
+              <div class="tariff-spec">
+                <span class="tariff-spec__label">
+                  <img src="@megafon/ui-icons/basic-16-net_16.svg" alt="">
+                  <span>Интернет</span>
+                </span>
+                <strong class="tariff-spec__value">100 Мбит/с</strong>
+              </div>
+              <div class="tariff-spec">
+                <span class="tariff-spec__label">
+                  <img src="@megafon/ui-icons/basic-16-tv_16.svg" alt="">
+                  <span>Телевидение</span>
+                </span>
+                <strong class="tariff-spec__value">250 ТВ 85 HD</strong>
+              </div>
+              <div class="tariff-spec">
+                <span class="tariff-spec__label">
+                  <img src="@megafon/ui-icons/basic-16-phone_16.svg" alt="">
+                  <span>Мобильная связь</span>
+                </span>
+                <strong class="tariff-spec__value">2000 минут</strong>
+              </div>
+              <div class="tariff-spec">
+                <span class="tariff-spec__label">
+                  <img src="@megafon/ui-icons/basic-16-sim-card_16.svg" alt="">
+                  <span>Мобильный интернет</span>
+                </span>
+                <strong class="tariff-spec__value">∞ ГБ</strong>
+              </div>
+            </div>
+
+            <div class="tariff-card__addons">
+              <div class="tariff-card__addons-title">Можно добавить в тариф</div>
+              <div class="tariff-card__addon-badge" aria-hidden="true">+</div>
+            </div>
+          </div>
+
+          <div class="tariff-card__footer">
+            <div class="tariff-card__price-row">
+              <div class="tariff-card__price">99 ₽/мес</div>
+              <div class="tariff-card__price-meta">
+                <span class="tariff-card__old-price">1149 ₽/мес</span>
+                <span class="tariff-card__discount">-92%</span>
+              </div>
+            </div>
+            <p class="tariff-card__caption">Скидка первый месяц</p>
+            <p class="tariff-card__caption">Подключение бесплатно</p>
+            <button type="button" class="btn btn--green btn--full tariff-card__button" data-open-modal="modal-application" data-request-topic="Тариф VIP" data-modal-title="Подключение тарифа «VIP»">Подключить</button>
+          </div>
+        </article>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- ===== MINI CTA ===== -->
 <section class="mini-cta">
-  <div class="container mini-cta__inner">
+  <div class="container">
+    <div class="mini-cta__inner">
     <div class="mini-cta__text">
       <strong>Не уверены какой тариф выбрать?</strong>
       <span>Позвоните нам — подберём оптимальный вариант за 2 минуты</span>
     </div>
-    <a href="tel:+78001234567" class="btn btn--white">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-      8 800 123-45-67 (бесплатно)
+    <div class="mini-cta__visual" aria-hidden="true">
+      <img src="img/qwest.png" alt="" class="mini-cta__image">
+    </div>
+    <a href="tel:+78001234567" class="btn btn--mini-cta">
+      <img src="img/phone.png" alt="" class="phone-icon">
+      8 800 123-45-67
     </a>
+    </div>
   </div>
 </section>
 
@@ -270,132 +494,66 @@
 <section class="advantages" id="advantages">
   <div class="container">
     <div class="section__header">
-      <span class="section__label">Почему выбирают нас</span>
-      <h2 class="section__title">8 причин подключиться к МегаСеть</h2>
+        <h2 class="section__title">8 причин подключиться к МегаФон</h2>
     </div>
-    <div class="advantages__grid">
-      <div class="advantage-card">
-        <div class="advantage-card__icon advantage-card__icon--blue">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        </div>
-        <h3>Быстрое подключение</h3>
-        <p>Выезд мастера в день подачи заявки. Подключим за 1–2 часа без лишних согласований.</p>
-      </div>
-      <div class="advantage-card">
-        <div class="advantage-card__icon advantage-card__icon--green">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2z"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
-        </div>
-        <h3>Безлимитный интернет</h3>
-        <p>Никаких ограничений по трафику и скорости. Смотрите, скачивайте, играйте без лимитов.</p>
-      </div>
-      <div class="advantage-card">
-        <div class="advantage-card__icon advantage-card__icon--blue">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-        </div>
-        <h3>Поддержка 24/7</h3>
-        <p>Техническая поддержка круглосуточно и без выходных. Звонок бесплатный — 8 800.</p>
-      </div>
-      <div class="advantage-card">
-        <div class="advantage-card__icon advantage-card__icon--green">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-        </div>
-        <h3>Оборудование в аренду</h3>
-        <p>Wi-Fi роутер в аренду — бесплатно. Замена при поломке — за наш счёт.</p>
-      </div>
-      <div class="advantage-card">
-        <div class="advantage-card__icon advantage-card__icon--blue">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-        </div>
-        <h3>Частный сектор</h3>
-        <p>Специализируемся на подключении частных домов, дач и коттеджей. Там, где другие не работают.</p>
-      </div>
-      <div class="advantage-card">
-        <div class="advantage-card__icon advantage-card__icon--green">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
-        <h3>Гарантия стабильности</h3>
-        <p>SLA 99,9% — гарантируем стабильную работу. При сбое — компенсация на счёт.</p>
-      </div>
-      <div class="advantage-card">
-        <div class="advantage-card__icon advantage-card__icon--blue">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
-        </div>
-        <h3>Честные цены</h3>
-        <p>Цена в договоре = цена в квитанции. Никаких скрытых платежей и неожиданных списаний.</p>
-      </div>
-      <div class="advantage-card">
-        <div class="advantage-card__icon advantage-card__icon--green">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
-        </div>
-        <h3>Скорость без потерь</h3>
-        <p>Собственная магистральная сеть. Скорость не падает в часы-пик и в выходные дни.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== FOR WHOM ===== -->
-<section class="for-whom" id="for-whom">
-  <div class="container">
-    <div class="section__header">
-      <span class="section__label">Кому подходит</span>
-      <h2 class="section__title">Интернет для дома и бизнеса</h2>
-      <p class="section__desc">Подключаем физических лиц и организации. Найдём решение для любого объекта.</p>
-    </div>
-    <div class="for-whom__grid">
-      <div class="whom-card">
-        <div class="whom-card__img">
-          <!-- Место для картинки: частный дом -->
-          <div class="img-placeholder img-placeholder--sm">
-            <span>Фото: частный дом<br>360×240px</span>
+      <div class="advantages__grid">
+        <div class="advantage-card">
+          <div class="advantage-card__icon">
+            <img src="img/podkluchenie.png" alt="">
           </div>
+          <h3>Быстрое подключение</h3>
+          <p>Выезд мастера в день подачи заявки. Подключим за 1–2 часа без лишних согласований.</p>
         </div>
-        <div class="whom-card__body">
-          <h3>Частный дом</h3>
-          <p>Подключаем интернет в частный сектор, где нет кабельных провайдеров. Прокладываем оптику до дома.</p>
-          <a href="#coverage" class="link-arrow">Проверить адрес →</a>
-        </div>
-      </div>
-      <div class="whom-card">
-        <div class="whom-card__img">
-          <!-- Место для картинки: дача -->
-          <div class="img-placeholder img-placeholder--sm">
-            <span>Фото: дача / коттедж<br>360×240px</span>
+        <div class="advantage-card">
+          <div class="advantage-card__icon">
+            <img src="img/bezlimit.png" alt="">
           </div>
+          <h3>Безлимитный интернет</h3>
+          <p>Никаких ограничений по трафику и скорости. Смотрите, скачивайте, играйте без лимитов.</p>
         </div>
-        <div class="whom-card__body">
-          <h3>Дача и СНТ</h3>
-          <p>Стабильный интернет на даче и в садовом товариществе. Работаем там, куда другие не едут.</p>
-          <a href="#coverage" class="link-arrow">Проверить адрес →</a>
-        </div>
-      </div>
-      <div class="whom-card">
-        <div class="whom-card__img">
-          <!-- Место для картинки: квартира -->
-          <div class="img-placeholder img-placeholder--sm">
-            <span>Фото: квартира / МКД<br>360×240px</span>
+        <div class="advantage-card">
+          <div class="advantage-card__icon">
+            <img src="img/podderzhka.png" alt="">
           </div>
+          <h3>Поддержка 24/7</h3>
+          <p>Техническая поддержка круглосуточно и без выходных. Звонок бесплатный</p>
         </div>
-        <div class="whom-card__body">
-          <h3>Квартира</h3>
-          <p>Оптика прямо до квартиры (FTTH). Максимальная скорость без потерь на последней миле.</p>
-          <a href="#coverage" class="link-arrow">Проверить адрес →</a>
-        </div>
-      </div>
-      <div class="whom-card">
-        <div class="whom-card__img">
-          <!-- Место для картинки: офис -->
-          <div class="img-placeholder img-placeholder--sm">
-            <span>Фото: офис / бизнес<br>360×240px</span>
+        <div class="advantage-card">
+          <div class="advantage-card__icon">
+            <img src="img/arendu.png" alt="">
           </div>
+          <h3>Оборудование в аренду</h3>
+          <p>Wi-Fi роутер в аренду. Установка бесплатно</p>
         </div>
-        <div class="whom-card__body">
-          <h3>Офис и склад</h3>
-          <p>Выделенный бизнес-канал с гарантией SLA. Персональный менеджер и приоритетная поддержка.</p>
-          <a href="#coverage" class="link-arrow">Получить расчёт →</a>
+        <div class="advantage-card">
+          <div class="advantage-card__icon">
+            <img src="img/chastnui_sekt.png" alt="">
+          </div>
+          <h3>Частный сектор</h3>
+          <p>Специализируемся на подключении частных домов, дач и коттеджей. Там, где другие не работают.</p>
+        </div>
+        <div class="advantage-card">
+          <div class="advantage-card__icon">
+            <img src="img/garantiya.png" alt="">
+          </div>
+          <h3>Гарантия стабильности</h3>
+          <p>SLA 99,9% — гарантируем стабильную работу. При сбое — компенсация на счёт.</p>
+        </div>
+        <div class="advantage-card">
+          <div class="advantage-card__icon">
+            <img src="img/cenu.png" alt="">
+          </div>
+          <h3>Честные цены</h3>
+          <p>Цена в договоре = цена в квитанции. Никаких скрытых платежей и неожиданных списаний.</p>
+        </div>
+        <div class="advantage-card">
+          <div class="advantage-card__icon">
+            <img src="img/skorost.png" alt="">
+          </div>
+          <h3>Скорость без потерь</h3>
+          <p>Собственная магистральная сеть. Скорость не падает в часы-пик и в выходные дни.</p>
         </div>
       </div>
-    </div>
   </div>
 </section>
 
@@ -403,109 +561,44 @@
 <section class="how-it-works" id="how-it-works">
   <div class="container">
     <div class="section__header">
-      <span class="section__label">Процесс подключения</span>
-      <h2 class="section__title">Подключение за 4 простых шага</h2>
-      <p class="section__desc">От заявки до работающего интернета — от 2 часов</p>
+      <h2 class="section__title">Как подключить</h2>
     </div>
     <div class="steps">
       <div class="step">
-        <div class="step__number">01</div>
+        <div class="step__number">1</div>
         <div class="step__content">
-          <h3>Оставьте заявку</h3>
-          <p>Заполните форму на сайте или позвоните по номеру 8 800 123-45-67. Займёт 1 минуту.</p>
+          <h3>Отправьте заявку</h3>
+          <p>Мы вам перезвоним и обсудим детали подключения</p>
         </div>
-        <div class="step__connector"></div>
       </div>
       <div class="step">
-        <div class="step__number">02</div>
+        <div class="step__number">2</div>
         <div class="step__content">
-          <h3>Проверка адреса</h3>
-          <p>Менеджер перезвонит в течение 15 минут, уточнит детали и согласует удобное время визита.</p>
+          <h3>Дождитесь монтажника</h3>
+          <p>Специалист приедет в назначенное время и подключит оборудование</p>
         </div>
-        <div class="step__connector"></div>
       </div>
       <div class="step">
-        <div class="step__number">03</div>
+        <div class="step__number">3</div>
         <div class="step__content">
-          <h3>Выезд мастера</h3>
-          <p>Мастер приедет в согласованное время, проведёт кабель, установит и настроит роутер.</p>
+          <h3>Подпишите договор</h3>
+          <p>После установки подпишите договор и заберите свой экземпляр</p>
         </div>
-        <div class="step__connector"></div>
       </div>
       <div class="step">
-        <div class="step__number">04</div>
+        <div class="step__number">4</div>
         <div class="step__content">
-          <h3>Интернет работает!</h3>
-          <p>Подпишите договор, получите логин и пароль. Интернет уже работает — пользуйтесь!</p>
+          <h3>Подключитесь к интернету</h3>
+          <p>Наслаждайтесь интернетом, связью и ТВ у себя дома</p>
         </div>
       </div>
     </div>
     <div class="how-it-works__cta">
-      <a href="#hero-form" class="btn btn--primary btn--large">Оставить заявку</a>
+      <button type="button" class="btn btn--primary btn--large" data-open-modal="modal-application" data-request-topic="Общая заявка" data-modal-title="Оставьте заявку на подключение">Оставить заявку</button>
       <a href="tel:+78001234567" class="btn btn--outline btn--large">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        <img src="img/phone.png" alt="" class="phone-icon">
         Позвонить
       </a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== TRUST / REVIEWS ===== -->
-<section class="reviews" id="reviews">
-  <div class="container">
-    <div class="section__header">
-      <span class="section__label">Отзывы клиентов</span>
-      <h2 class="section__title">Нам доверяют более 12 000 абонентов</h2>
-    </div>
-    <div class="reviews__grid">
-      <div class="review-card">
-        <div class="review-card__header">
-          <div class="review-card__avatar">АК</div>
-          <div>
-            <div class="review-card__name">Александр К.</div>
-            <div class="review-card__stars">★★★★★</div>
-          </div>
-          <div class="review-card__source">Яндекс</div>
-        </div>
-        <p class="review-card__text">«Живём в частном доме на окраине. Другие провайдеры отказывали или предлагали 3G. МегаСеть подключили за один день, скорость 300 Мбит/с — летает! Очень доволен.»</p>
-        <div class="review-card__date">2 недели назад</div>
-      </div>
-      <div class="review-card">
-        <div class="review-card__header">
-          <div class="review-card__avatar">МП</div>
-          <div>
-            <div class="review-card__name">Мария П.</div>
-            <div class="review-card__stars">★★★★★</div>
-          </div>
-          <div class="review-card__source">Google</div>
-        </div>
-        <p class="review-card__text">«Перешли с другого провайдера — ночь и день. Раньше вечером скорость падала до нуля. Теперь смотрим 4K без буферизации на 5 устройствах. Поддержка отвечает быстро.»</p>
-        <div class="review-card__date">1 месяц назад</div>
-      </div>
-      <div class="review-card">
-        <div class="review-card__header">
-          <div class="review-card__avatar">ДИ</div>
-          <div>
-            <div class="review-card__name">Дмитрий И.</div>
-            <div class="review-card__stars">★★★★★</div>
-          </div>
-          <div class="review-card__source">2ГИС</div>
-        </div>
-        <p class="review-card__text">«Подключили офис и склад на разных объектах. Оба работают стабильно. Персональный менеджер решает любые вопросы. Рекомендую для бизнеса.»</p>
-        <div class="review-card__date">3 недели назад</div>
-      </div>
-    </div>
-    <div class="reviews__trust">
-      <div class="trust-badge">
-        <!-- Место для логотипа Яндекс -->
-        <div class="img-placeholder img-placeholder--badge">Яндекс 4.9★</div>
-      </div>
-      <div class="trust-badge">
-        <div class="img-placeholder img-placeholder--badge">Google 4.8★</div>
-      </div>
-      <div class="trust-badge">
-        <div class="img-placeholder img-placeholder--badge">2ГИС 4.9★</div>
-      </div>
     </div>
   </div>
 </section>
@@ -514,8 +607,7 @@
 <section class="faq" id="faq">
   <div class="container">
     <div class="section__header">
-      <span class="section__label">Частые вопросы</span>
-      <h2 class="section__title">Ответы на популярные вопросы</h2>
+        <h2 class="section__title">Ответы на популярные вопросы</h2>
     </div>
     <div class="faq__grid">
       <div class="faq__item">
@@ -594,118 +686,16 @@
   </div>
 </section>
 
-<!-- ===== FINAL CTA ===== -->
-<section class="final-cta" id="final-cta">
-  <div class="container">
-    <div class="final-cta__inner">
-      <div class="final-cta__text">
-        <div class="final-cta__badge">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          Акция действует до конца месяца
-        </div>
-        <h2>Подключитесь сегодня<br>и получите первый месяц <span class="highlight">бесплатно</span></h2>
-        <p>Оставьте заявку прямо сейчас — мастер приедет сегодня. Количество бесплатных подключений в месяц ограничено.</p>
-        <div class="final-cta__urgency">
-          <div class="urgency__item">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            Бесплатное подключение
-          </div>
-          <div class="urgency__item">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-            Первый месяц — 0 ₽
-          </div>
-          <div class="urgency__item">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            Выезд в день заявки
-          </div>
-        </div>
-      </div>
-      <div class="final-cta__form">
-        <h3>Оставьте заявку</h3>
-        <p>Перезвоним за 15 минут</p>
-        <form id="final-form" action="#" method="post">
-          <div class="form__group">
-            <input type="text" name="name" class="form__input" placeholder="Ваше имя" required>
-          </div>
-          <div class="form__group">
-            <input type="tel" name="phone" class="form__input" placeholder="Ваш телефон" required>
-          </div>
-          <div class="form__group">
-            <input type="text" name="address" class="form__input" placeholder="Ваш адрес" required>
-          </div>
-          <button type="submit" class="btn btn--primary btn--large btn--full">
-            Получить бесплатное подключение
-          </button>
-          <p class="form__agree">Нажимая кнопку, вы соглашаетесь с <a href="/privacy">политикой конфиденциальности</a></p>
-        </form>
-        <div class="final-cta__phone">
-          <span>или позвоните:</span>
-          <a href="tel:+78001234567">8 800 123-45-67</a>
-          <span class="free-call">звонок бесплатный</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ===== FOOTER ===== -->
 <footer class="footer" id="footer">
   <div class="container">
-    <div class="footer__top">
-      <div class="footer__brand">
-        <a href="/" class="logo">
-          <div class="logo__icon">M</div>
-          <span class="logo__text">МегаСеть</span>
-        </a>
-        <p>Интернет-провайдер для дома и бизнеса. Работаем с 2019 года.</p>
-        <div class="footer__socials">
-          <a href="#" class="social-link" aria-label="ВКонтакте">ВК</a>
-          <a href="#" class="social-link" aria-label="Telegram">TG</a>
-          <a href="#" class="social-link" aria-label="WhatsApp">WA</a>
-        </div>
-      </div>
-      <div class="footer__col">
-        <h4>Услуги</h4>
-        <ul>
-          <li><a href="#tariffs">Тарифы</a></li>
-          <li><a href="#for-whom">Частный дом</a></li>
-          <li><a href="#for-whom">Квартира</a></li>
-          <li><a href="#for-whom">Дача</a></li>
-          <li><a href="#for-whom">Бизнес</a></li>
-        </ul>
-      </div>
-      <div class="footer__col">
-        <h4>Компания</h4>
-        <ul>
-          <li><a href="/about">О компании</a></li>
-          <li><a href="/news">Новости</a></li>
-          <li><a href="/documents">Документы</a></li>
-          <li><a href="/vacancy">Вакансии</a></li>
-          <li><a href="/contacts">Контакты</a></li>
-        </ul>
-      </div>
-      <div class="footer__col">
-        <h4>Поддержка</h4>
-        <ul>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="/lk">Личный кабинет</a></li>
-          <li><a href="/pay">Оплата</a></li>
-          <li><a href="/coverage">Зона покрытия</a></li>
-        </ul>
-      </div>
-      <div class="footer__col">
-        <h4>Контакты</h4>
-        <a href="tel:+78001234567" class="footer__phone">8 800 123-45-67</a>
-        <p class="footer__phone-note">Бесплатно, 24/7</p>
-        <a href="mailto:info@megaset.ru" class="footer__email">info@megaset.ru</a>
-        <p class="footer__address">г. Ваш город, ул. Примерная, 1</p>
-      </div>
-    </div>
-    <div class="footer__bottom">
-      <p>© 2024 МегаСеть. Все права защищены.</p>
-      <div class="footer__links">
-        <a href="/privacy">Политика конфиденциальности</a>
-        <a href="/offer">Публичная оферта</a>
+    <div class="footer__content">
+      <a href="index.html" class="logo footer__logo">
+        <img src="img/logo-new.svg" alt="">
+      </a>
+      <div class="footer__legal">
+        <p>Вся информация на сайте размещена на основании партнерского договора с ПАО «МегаФон». Посещая сайт megafon-connect.ru, вы предоставляете согласие на обработку данных, включая cookies и иные технические данные, на условиях, указанных в <a href="privacy.html#privacy-policy">политике конфиденциальности</a>.</p>
+        <p>Отправляя заявку, пользователь принимает <a href="privacy.html#privacy-policy">политику конфиденциальности</a> и даёт <a href="privacy.html#personal-data-consent">согласие на обработку персональных данных</a>.</p>
       </div>
     </div>
   </div>
@@ -713,14 +703,45 @@
 
 <!-- ===== FLOATING CALL BUTTON ===== -->
 <a href="tel:+78001234567" class="float-call" aria-label="Позвонить">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+  <img src="img/phone.png" alt="" class="phone-icon phone-icon--floating">
 </a>
 
+<!-- ===== APPLICATION MODAL ===== -->
+<div class="modal" id="modal-application" role="dialog" aria-modal="true" aria-labelledby="application-modal-title" aria-hidden="true">
+  <div class="modal__overlay" data-close-modal></div>
+  <div class="modal__box modal__box--form">
+    <button class="modal__close" type="button" data-close-modal aria-label="Закрыть">×</button>
+    <p class="modal__eyebrow">Подключение МегаФон</p>
+    <h3 id="application-modal-title">Оставьте заявку на подключение</h3>
+    <p class="modal__lead" id="application-modal-description">Оставьте контакты, и мы свяжемся с вами в течение 15 минут.</p>
+    <form class="modal-form" id="modal-form" action="#" method="post">
+      <input type="hidden" name="request_topic" id="modal-request-topic" value="Общая заявка">
+      <div class="form__group">
+        <input type="text" name="address" class="form__input" placeholder="Улица и номер дома" required autocomplete="street-address">
+      </div>
+      <div class="form__group">
+        <input type="tel" name="phone" class="form__input" placeholder="Ваш телефон" required autocomplete="tel">
+      </div>
+      <div class="form__consents">
+        <label class="form-consent">
+          <input type="checkbox" name="privacy_policy" class="form-consent__input" required checked>
+          <span class="form-consent__text">Я принимаю <a href="privacy.html#privacy-policy" target="_blank" rel="noopener">политику конфиденциальности</a></span>
+        </label>
+        <label class="form-consent">
+          <input type="checkbox" name="personal_data_processing" class="form-consent__input" required checked>
+          <span class="form-consent__text">Я даю <a href="privacy.html#personal-data-consent" target="_blank" rel="noopener">согласие на обработку персональных данных</a></span>
+        </label>
+      </div>
+      <button type="submit" class="btn btn--primary btn--full">Отправить заявку</button>
+    </form>
+  </div>
+</div>
+
 <!-- ===== MODAL SUCCESS ===== -->
-<div class="modal" id="modal-success" role="dialog" aria-modal="true" aria-label="Заявка принята">
-  <div class="modal__overlay" id="modal-overlay"></div>
+<div class="modal" id="modal-success" role="dialog" aria-modal="true" aria-label="Заявка принята" aria-hidden="true">
+  <div class="modal__overlay" data-close-modal></div>
   <div class="modal__box">
-    <button class="modal__close" id="modal-close" aria-label="Закрыть">×</button>
+    <button class="modal__close" type="button" data-close-modal aria-label="Закрыть">×</button>
     <div class="modal__icon">✓</div>
     <h3>Заявка принята!</h3>
     <p>Мы перезвоним вам в течение <strong>15 минут</strong> и согласуем удобное время подключения.</p>

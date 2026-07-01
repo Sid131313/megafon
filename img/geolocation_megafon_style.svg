@@ -1,0 +1,39 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Иконка геопозиции">
+  <defs>
+    <filter id="softShadow" x="58" y="42" width="396" height="438" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#731982" flood-opacity="0.22"/>
+      <feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#000000" flood-opacity="0.10"/>
+    </filter>
+
+    <linearGradient id="pinPurple" x1="151" y1="88" x2="360" y2="430" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8E35A0"/>
+      <stop offset="1" stop-color="#731982"/>
+    </linearGradient>
+
+    <linearGradient id="greenInner" x1="188" y1="116" x2="313" y2="281" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#19D46A"/>
+      <stop offset="1" stop-color="#00B956"/>
+    </linearGradient>
+
+    <linearGradient id="highlight" x1="166" y1="99" x2="252" y2="224" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <g filter="url(#softShadow)">
+    <path d="M256 64C172.2 64 104 132.2 104 216C104 318.8 231.4 438.5 246.1 452.1C251.7 457.3 260.3 457.3 265.9 452.1C280.6 438.5 408 318.8 408 216C408 132.2 339.8 64 256 64Z" fill="url(#pinPurple)"/>
+
+    <path d="M256 96C189.9 96 136 149.9 136 216C136 287.7 211.2 374.8 256 419.4C300.8 374.8 376 287.7 376 216C376 149.9 322.1 96 256 96Z" fill="#7F2290" opacity="0.35"/>
+
+    <circle cx="256" cy="216" r="82" fill="url(#greenInner)"/>
+
+    <circle cx="256" cy="216" r="46" fill="#FFFFFF"/>
+
+    <path d="M184 141C204.5 111.3 237.9 96 271.5 99.2" stroke="url(#highlight)" stroke-width="24" stroke-linecap="round"/>
+
+    <path d="M226 201C241.8 186.5 270.2 186.5 286 201" stroke="#731982" stroke-width="18" stroke-linecap="round"/>
+    <path d="M238 223C247.6 214.1 264.4 214.1 274 223" stroke="#731982" stroke-width="15" stroke-linecap="round"/>
+    <circle cx="256" cy="245" r="9" fill="#731982"/>
+  </g>
+</svg>
